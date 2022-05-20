@@ -3,12 +3,9 @@ let pageList=["login","sec1","sec2","sec3","sec4"];
 //要去的頁面
 let chosen=undefined;
 
-//顯示要去的頁面
-function showChosen(choose){
-    document.getElementById(`${choose}`).style.display="inline-block"
-}
-//找到其他頁面並隱藏它們
-function findOthers(choose){
+//顯示要去的頁面、隱藏其他頁面
+function showChosenAndHideOthers(choose){
+    document.getElementById(`${choose}`).style.display="inline-block";
     let others=pageList.filter(element=>
         element!=choose
     )
@@ -21,29 +18,29 @@ function goDifferentPage(page){
     switch(page){
         case "login":
             chosen="login";
-            showChosen(chosen);
-            findOthers(chosen);
+            showChosenAndHideOthers(chosen)
             break;
         case "sec1":
             chosen="sec1";
-            showChosen(chosen);
-            findOthers(chosen);
+            showChosenAndHideOthers(chosen)
             break;
         case "sec2":
             chosen="sec2";
-            showChosen(chosen);
-            findOthers(chosen);
+            showChosenAndHideOthers(chosen)
             break;
         case "sec3":
             chosen="sec3";
-            showChosen(chosen);
-            findOthers(chosen);
+            showChosenAndHideOthers(chosen)
             break;
         case "sec4":
             chosen="sec4";
-            showChosen(chosen);
-            findOthers(chosen);
+            showChosenAndHideOthers(chosen)
             break;          
     }
 }
-
+//條件判斷要去的頁面
+function judgePage(){
+    if(true){
+        goDifferentPage("sec2")
+    }
+}
