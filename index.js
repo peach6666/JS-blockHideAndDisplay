@@ -18,25 +18,21 @@ function goDifferentPage(page){
     switch(page){
         case "login":
             chosen="login";
-            showChosenAndHideOthers(chosen)
             break;
         case "sec1":
             chosen="sec1";
-            showChosenAndHideOthers(chosen)
             break;
         case "sec2":
             chosen="sec2";
-            showChosenAndHideOthers(chosen)
             break;
         case "sec3":
             chosen="sec3";
-            showChosenAndHideOthers(chosen)
             break;
         case "sec4":
             chosen="sec4";
-            showChosenAndHideOthers(chosen)
             break;          
     }
+    showChosenAndHideOthers(chosen)
 }
 //條件判斷要去的頁面
 function judgePage(){
